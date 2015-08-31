@@ -35,6 +35,7 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
+				<p id="message"></p>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
@@ -45,7 +46,7 @@
 			window.plugins.flashlight.available(function(isAvailable) {
 			  if (isAvailable) {
 				  
-				 alert("Flashlight IS available on this device");
+				 document.getElementById("message").innerHTML("Flashlight IS available on this device");
 
 			    // switch on
 			    window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
@@ -56,6 +57,7 @@
 			    }, 3000);
 
 			  } else {
+				  document.getElementById("message").innerHTML("Flashlight IS available on this device");
 			    alert("Flashlight not available on this device");
 			  }
 			});
