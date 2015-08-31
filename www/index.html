@@ -45,14 +45,7 @@
             app.initialize();
 			
 			
-			app.onDeviceReady(function(event) { 
-			  //do work
-				alert("deviceready");
-				flashlightOn();
-			});
-			
-			
-			
+			document.addEventListener("deviceready", flashlightOn, false);
 			
 			document.addEventListener("backbutton", function() {
 			  // pass exitApp as callbacks to the switchOff method
