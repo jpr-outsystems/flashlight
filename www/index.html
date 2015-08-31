@@ -38,15 +38,14 @@
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="js/plugins/Flashlight.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
 			
-			
-			
 			window.plugins.flashlight.available(function(isAvailable) {
 			  if (isAvailable) {
+				  
+				 alert("Flashlight IS available on this device");
 
 			    // switch on
 			    window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
