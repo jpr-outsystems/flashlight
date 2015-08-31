@@ -65,7 +65,7 @@
 				window.plugins.flashlight.available(function(isAvailable) {
 				  if (isAvailable) {
 				  
-					 document.getElementById("message").innerHTML("Flashlight IS available on this device");
+					 document.getElementById("message").innerHTML = "Flashlight IS available on this device";
 
 				    // switch on
 				    window.plugins.flashlight.switchOn(); // success/error callbacks may be passed
@@ -76,7 +76,7 @@
 				    }, 3000);
 
 				  } else {
-					  document.getElementById("message").innerHTML("Flashlight IS available on this device");
+					  document.getElementById("message").innerHTML = "Flashlight IS available on this device";
 				    alert("Flashlight not available on this device");
 				  }
 				});
